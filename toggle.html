@@ -16,7 +16,7 @@
 
         $('.toggle').keypress(function(e) {
             var key = e.which;
-            if (key == 13) {
+            if (key == 13 || key == 32) {
                 buttonPress(this.id);
             }
         });
@@ -24,15 +24,11 @@
 
     function buttonPress(elementId) {
         var ariaPressed = ($("#" + elementId).attr('aria-pressed') === 'true');
-        // console.log(ariaPressed);
-        if (ariaPressed) {
-            $("#" + elementId).attr('aria-pressed', 'false');
-            // console.log("was TRUE, now is FALSE");
-        } else {
-            $("#" + elementId).attr('aria-pressed', 'true');
-            // console.log("was FALSE, now is TRUE");
+        if (ariaPressed) { // element is NOT pressed
+            $("#" + elementId).attr('aria-pressed', 'false').css('background-color', '#fff').css('color', '#000');
+        } else { // element IS pressed
+            $("#" + elementId).attr('aria-pressed', 'true').css('background-color', '#f76').css('color', '#fff');
         }
-        // console.log($("#" + elementId).attr('aria-pressed'));
     }
     </script>
 </head>
