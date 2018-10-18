@@ -59,7 +59,7 @@
             $panel.removeAttr('title');
 
             $tab = $('<li/>').attr({
-                'id': id + '_tab' + i, // create unique id for a tab
+                'id': id + '_tab' + i, // create unique id for a tab 
                 'role': 'tab', // assign tab role
                 'aria-controls': 'panel' + i // define which panel it controls // create unique id for a tab
 
