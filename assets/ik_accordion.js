@@ -37,8 +37,8 @@
             'role': 'region' // add the accordion to the landmarked regions
         }).addClass('ik_accordion');
 
-        // this.headers = $elem.children('dt')
-        // .attr({'role': 'heading'}); // set heading role for each accordion header
+        this.headers = $elem.children('dt')
+        .attr({'role': 'heading'}); // set heading role for each accordion header
 
         this.headers = $elem.children('dt').each(function(i, el) {
             var $me, $btn;
